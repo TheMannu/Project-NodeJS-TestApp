@@ -84,3 +84,13 @@ Verify installation By Running a test Container:
 ```bash
 docker run hello-world
 ```
+
+### 2. Mongo Network Setup For Communication Between Containers.
+```bash
+docker network create mongo-network  # Create dedicated network
+```
+
+Varify Network:
+```bash
+docker network ls # Should show mongo-network 
+```
