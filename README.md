@@ -28,3 +28,18 @@ Verify installations:
 node --version
 npm --version
 ```
+
+### 2. Application Setup
+```bash
+git clone https://github.com/TheMannu/Project-NodeJS-TestApp.git
+cd Project-NodeJS-TestApp
+npm install  # Install dependencies
+```
+
+### 3. Initial Test Run
+```bash
+node server.js  # Runs in foreground (Ctrl+C to stop)
+```
+*Note: Database connection errors are expected at this stage.*
+
+---
