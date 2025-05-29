@@ -43,3 +43,22 @@ node server.js  # Runs in foreground (Ctrl+C to stop)
 *Note: Database connection errors are expected at this stage.*
 
 ---
+
+## Phase 2: Production Process Management
+
+### Option A: PM2 (Recommended)
+```bash
+sudo npm install -g pm2
+pm2 start server.js    # Start application
+pm2 save              # Save process list
+pm2 startup           # Enable auto-start on boot
+```
+
+Management commands:
+```bash
+pm2 list              # View running applications
+pm2 logs              # View application logs
+curl http://<Public IP>:5050  # Test application
+```
+
+---
