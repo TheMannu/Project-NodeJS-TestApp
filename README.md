@@ -58,7 +58,29 @@ Management commands:
 ```bash
 pm2 list              # View running applications
 pm2 logs              # View application logs
+```
+Verify Application 
+```bash
 curl http://<Public IP>:5050  # Test application
 ```
-
 ---
+
+## Phase 3: Docker Setup
+
+### 1. Docker Installation
+```bash
+sudo apt update
+sudo apt install docker.io -y
+sudo usermod -aG docker $USER  # Add user to docker group
+```
+*Log out and back in for group changes to take effect.*
+
+Verify installation:
+```bash
+sudo systemctl status docker
+```
+
+Verify installation By Running a test Container:
+```bash
+docker run hello-world
+```
