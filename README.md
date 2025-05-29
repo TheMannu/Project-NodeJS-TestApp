@@ -94,3 +94,22 @@ Varify Network:
 ```bash
 docker network ls # Should show mongo-network 
 ```
+
+### 3. MongoDB Container Setup.
+```bash
+docker run -d -p 27017:27017 --name mongo --network mongo-network -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password mongo
+```
+
+Verify containers:
+```bash
+docker ps  # Should show mongo running container 
+```
+### 4. Mongo Express Setup
+```bash
+docker run -d -p 8081:8081 --name mongo-express --network mongo-network -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password -e ME_CONFIG_MONGODB_URL="mongodb://admin:password@mongo:27017" mongo-express
+```
+
+Verify containers:
+```bash
+docker ps  # Should show both running containers 
+```
