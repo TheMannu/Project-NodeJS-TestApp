@@ -14,3 +14,17 @@ This guide explains how to:
 - Docker (installation covered below)
 
 ---
+
+## Phase 1: Node.js Application Setup
+
+### 1. System Preparation
+```bash
+sudo apt update && sudo apt upgrade -y  # Update system packages
+sudo apt install nodejs npm -y         # Install Node.js and npm
+```
+
+Verify installations:
+```bash
+node --version
+npm --version
+```
