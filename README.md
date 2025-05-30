@@ -113,3 +113,12 @@ Verify containers:
 ```bash
 docker ps  # Should show both running containers 
 ```
+
+### Phase 5: Verifying the Setup
+
+Application: http://public IP:5050
+
+Mongo Express: http://public IP:8081 (login with admin/pass)
+
+Test database operations through your application interface and verify the data on Mongo Express Inter interface
+---
