@@ -151,3 +151,11 @@ docker volume prune  # Remove unused volumes
 ```
 
 ---
+
+## Key Notes:
+
+1. Security considerations:
+   - Default admin credentials should be changed in production
+   - Network isolation is implemented via custom Docker network
+
+2. All Docker components are ephemeral by default (data not persisted)
