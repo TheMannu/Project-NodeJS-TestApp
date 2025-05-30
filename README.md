@@ -145,3 +145,9 @@ docker rm mongo-express mongo
 docker network rm mongo-network
 ```
 
+### 3. Optional Cleanup
+```bash
+docker volume prune  # Remove unused volumes
+```
+
+---
