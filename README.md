@@ -137,3 +137,11 @@ For direct runs:
 ps aux | grep node  # Find process ID
 kill [process_id]   # Replace with actual ID
 ```
+
+### 2. Stop Database Services
+```bash
+docker stop mongo-express mongo
+docker rm mongo-express mongo
+docker network rm mongo-network
+```
+
