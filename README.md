@@ -122,3 +122,18 @@ Mongo Express: http://public IP:8081 (login with admin/pass)
 
 Test database operations through your application interface and verify the data on Mongo Express Inter interface
 ---
+
+## Phase 4: System Shutdown
+
+### 1. Stop Node.js Application
+For PM2:
+```bash
+pm2 stop server
+pm2 delete server
+```
+
+For direct runs:
+```bash
+ps aux | grep node  # Find process ID
+kill [process_id]   # Replace with actual ID
+```
