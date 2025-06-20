@@ -77,8 +77,6 @@ sudo usermod -aG docker $USER  # Add user to docker group
 The error message:- permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock
 - means your current user doesn’t have permission to access the Docker daemon.
 
----
-
 ####  **Add User to Docker Group (Recommended for Regular Use)**
 
 1. **Add your user to the `docker` group**:
@@ -101,7 +99,7 @@ The error message:- permission denied while trying to connect to the Docker daem
    ```
 
 
-### ✅ Check Docker Daemon is Running
+#### ✅ Check Docker Daemon is Running
 
 Also make sure the Docker service is running:
 Verify installation:
@@ -119,8 +117,8 @@ Verify installation By Running a test Container:
 ```bash
 docker run hello-world
 ```
-
-### 2. Mongo Network Setup For Communication Between Containers.
+---
+### 2. Network Setup For Communication Between Containers. (Mongo and Mongo Express)
 ```bash
 docker network create mongo-network  # Create dedicated network
 ```
