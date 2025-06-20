@@ -73,11 +73,46 @@ sudo apt update
 sudo apt install docker.io -y
 sudo usermod -aG docker $USER  # Add user to docker group
 ```
+
+The error message:- permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock
+- means your current user doesn’t have permission to access the Docker daemon.
+
+---
+
+####  **Add User to Docker Group (Recommended for Regular Use)**
+
+1. **Add your user to the `docker` group**:
+
+   ```bash
+   sudo usermod -aG docker $USER
+   ```
 *Log out and back in for group changes to take effect.*
 
+2. **Log out and log back in**, or run:
+
+   ```bash
+   newgrp docker
+   ```
+
+3. **Verify it works**:
+
+   ```bash
+   docker images
+   ```
+
+
+### ✅ Check Docker Daemon is Running
+
+Also make sure the Docker service is running:
 Verify installation:
 ```bash
 sudo systemctl status docker
+```
+
+If it’s not active, start it:
+
+```bash
+sudo systemctl start docker
 ```
 
 Verify installation By Running a test Container:
