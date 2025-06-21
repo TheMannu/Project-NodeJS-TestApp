@@ -71,7 +71,6 @@ curl http://<Public IP>:5050  # Test application
 ```bash
 sudo apt update
 sudo apt install docker.io -y
-sudo usermod -aG docker $USER  # Add user to docker group
 ```
 
 The error message:- permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock
