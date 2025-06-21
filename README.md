@@ -184,7 +184,17 @@ docker volume prune  # Remove unused volumes
 
 ---
 ---
-### Instead of running multiple `docker run` commands, you can simplify and manage your multi-container setup using **Docker Compose**. It’s a powerful tool that lets you define and run multi-container Docker applications using a single YAML file.
+
+### Instead of running multiple `docker run` commands, us can simplify and manage your multi-container setup using **Docker Compose**. It’s a powerful tool that lets us define and run multi-container Docker applications using a single YAML file.
+
+---
+## 🔹 What is Docker Compose?
+
+**Docker Compose** is a tool that:
+
+* Allows you to define services (containers), networks, and volumes in a single YAML file (`docker-compose.yml`).
+* Brings up and tears down multi-container environments with one command.
+* Keeps your infrastructure version-controlled and reproducible.
 
 ---
 
