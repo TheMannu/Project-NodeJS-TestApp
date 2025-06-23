@@ -1,12 +1,14 @@
-FROM node
+FROM node:18
 
 ENV MONGO_DB_USERNAME=admin \
-    MONGO_DB_PWD=passward
+    MONGO_DB_PWD=password
 
-RUN mkdir -p /nodejs-testapp
+WORKDIR /nodejs-testapp
 
-COPY . /nodejs-testapp
+COPY . .
+
+RUN npm install
 
 EXPOSE 5050
 
-CMD ["node", "/nodejs-testapp/server.js"]
+CMD ["node", "server.js"]
