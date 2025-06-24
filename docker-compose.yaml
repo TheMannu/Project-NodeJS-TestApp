@@ -1,15 +1,15 @@
 version: '3.8'
  
 services:
-  nodeapp:
-    image: image-2
-    container_name: nodecontainer
-    ports:
-      - "5050:5050"
-    environment:
-      MONGO_DB_USERNAME: admin
-      MONGO_DB_PWD: passward
-    restart: unless-stopped
+  # nodeapp:
+  #   image: image-2
+  #   container_name: nodecontainer
+  #   ports:
+  #     - "5050:5050"
+  #   environment:
+  #     MONGO_DB_USERNAME: admin
+  #     MONGO_DB_PWD: passward
+  #   restart: unless-stopped
     
   mongo:
     image: mongo
@@ -19,6 +19,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+    - /home/ubuntu/mongo-volume:/data/db
 
   mongo-express:
     image: mongo-express
